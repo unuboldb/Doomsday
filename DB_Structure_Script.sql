@@ -1,3 +1,10 @@
+ALTER DATABASE [DoomsdayPrepDB]
+SET SINGLE_USER
+WITH ROLLBACK IMMEDIATE;
+
+-- Drop the database
+DROP DATABASE [DoomsdayPrepDB];
+
 USE [master]
 GO
 
@@ -13,8 +20,8 @@ CREATE TABLE [dbo].[Locations]
     [LocationName] [varchar](50) NOT NULL UNIQUE,
     [LocationType] [varchar](255) NOT NULL,
     [LocationSafetyLevel] [varchar](6) NOT NULL,
-    [LocationCapacity] [int] NOT NULL,
-    [LocationPopulation] [int] NOT NULL,
+    [LocationCapacity] [int],
+    [LocationPopulation] [int],
     CONSTRAINT PK_LocationID PRIMARY KEY (LocationID),
     CONSTRAINT CHK_LocationID CHECK (LocationID LIKE 'L%')
 ) ON [PRIMARY]
@@ -26,10 +33,10 @@ CREATE TABLE [dbo].[Water]
     [WaterID] [char](4) NOT NULL UNIQUE,
     [WaterSource] [varchar](50) NOT NULL,
     [WaterType] varchar(25) NOT NULL,
-    [WaterQuantity] [decimal](10,2) NOT NULL,
+    [WaterQuantity] [decimal](10,2),
     CONSTRAINT PK_WaterID PRIMARY KEY (WaterID),
     CONSTRAINT CHK_WaterID CHECK (WaterID LIKE 'W%'),
-    CONSTRAINT CHK_WaterType CHECK (WaterType IN ('Clean', 'Dirty', 'Purified'))
+    CONSTRAINT CHK_WaterType CHECK (WaterType IN ('Clean', 'Dirty', 'Purified', NULL))
 ) ON [PRIMARY]
 GO
 
@@ -50,13 +57,13 @@ GO
 CREATE TABLE [dbo].[Power]
 (
     [PowerID] [char](4) NOT NULL UNIQUE,
-    [PowerType][varchar](10) NOT NULL UNIQUE,
+    [PowerType][varchar](50) NOT NULL,
     [FuelType][varchar](15) NOT NULL,
     [Capacity][int],
     CONSTRAINT PK_PowerID PRIMARY KEY (PowerID),
     CONSTRAINT CHK_PowerID CHECK (PowerID LIKE 'O%'),
     CONSTRAINT CHK_PowerType CHECK (PowerType IN ('Battery', 'Generator', 'Grid')),
-    CONSTRAINT CHK_FuelType CHECK (FuelType IN ('Solar', 'Gas', 'Wind', 'Nuclear', 'Hydro', 'Coal', 'Lithium'))
+    CONSTRAINT CHK_FuelType CHECK (FuelType IN ('Solar', 'Gas', 'Wind', 'Nuclear', 'Hydro', 'Coal', 'Battery', 'Bio'))
 ) ON [PRIMARY]
 GO
 
@@ -143,7 +150,6 @@ CREATE TABLE [dbo].[Inventory]
     [InventoryID][char](4) NOT NULL UNIQUE,
     [CurrencyID][char](4) NOT NULL,
     [Category][varchar](255) NOT NULL,
-    [InventoryName][varchar](50) NOT NULL,
     [Quantity][int] NOT NULL,
     [InventoryValue][varchar](6) NOT NULL,
     [Measurement][varchar](15) NOT NULL,
@@ -160,11 +166,11 @@ CREATE TABLE [dbo].[PersonSkills]
 (
     [PeopleID][char](4) NOT NULL,
     [SkillsID][char](4) NOT NULL,
-    [SkillsLevel][varchar](50) NOT NULL,
+    [SkillLevel][varchar](50) NOT NULL,
     CONSTRAINT PK_People_Skills PRIMARY KEY (PeopleID, SkillsID),
     CONSTRAINT FK_PeopleID1 FOREIGN KEY (PeopleID) REFERENCES [People](PeopleID),
     CONSTRAINT FK_SkillsID FOREIGN KEY (SkillsID) REFERENCES [Skills](SkillsID),
-    CONSTRAINT CHK_SkillsLevel CHECK (SkillsLevel IN ('Beginner', 'Advanced', 'Expert'))
+    CONSTRAINT CHK_SkillsLevel CHECK (SkillLevel IN ('Beginner', 'Advanced', 'Expert'))
 ) ON [PRIMARY]
 GO
 
