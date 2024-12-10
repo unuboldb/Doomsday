@@ -1,10 +1,3 @@
-ALTER DATABASE [DoomsdayPrepDB]
-SET SINGLE_USER
-WITH ROLLBACK IMMEDIATE;
-
--- Drop the database
-DROP DATABASE [DoomsdayPrepDB];
-
 USE [master]
 GO
 
