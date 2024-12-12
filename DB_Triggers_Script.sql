@@ -85,3 +85,21 @@ BEGIN
         WHERE Category IN ('Clothes', 'Food', 'Water', 'Ammo', 'Fuel', 'Tools');
     END
 END;
+
+-- When a new PeopleID is added Inventory will be adjusted
+CREATE TRIGGER NewMember
+ON [DoomsdayPrepDB].[dbo].[People]
+AFTER INSERT
+AS
+BEGIN
+    SET NOCOUNT ON;
+        UPDATE Inventory
+        SET Quantity = CASE
+            WHEN Category = 'Clothes' THEN Quantity - 4
+            WHEN Category = 'Food' THEN Quantity - 5
+            WHEN Category = 'Water' THEN Quantity - 5
+            WHEN Category = 'Tools' THEN Quantity - 2
+            ELSE Quantity
+        END
+        WHERE Category IN ('Clothes', 'Food', 'Water', 'Tools');
+END;
