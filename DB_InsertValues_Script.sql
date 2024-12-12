@@ -17,10 +17,10 @@ GO
 INSERT [dbo].[Locations] ([LocationID], [LocationName], [LocationType], [LocationSafetyLevel], [LocationCapacity], [LocationPopulation]) VALUES (N'L005', N'Grocery Store', N'Food Source', N'Low', 25, 5)
 GO
 
-INSERT [dbo].[Locations] ([LocationID], [LocationName], [LocationType], [LocationSafetyLevel], [LocationCapacity], [LocationPopulation]) VALUES (N'L006', N'FarmHouse', N'Ally Base', N'Medium', 40, 14)
+INSERT [dbo].[Locations] ([LocationID], [LocationName], [LocationType], [LocationSafetyLevel], [LocationCapacity], [LocationPopulation]) VALUES (N'L006', N'FarmHouse', N'Ally Base', N'Medium', 40, 18)
 GO
 
-INSERT [dbo].[Locations] ([LocationID], [LocationName], [LocationType], [LocationSafetyLevel], [LocationCapacity], [LocationPopulation]) VALUES (N'L007', N'Military Base', N'Ally Base', N'High', 60, 18)
+INSERT [dbo].[Locations] ([LocationID], [LocationName], [LocationType], [LocationSafetyLevel], [LocationCapacity], [LocationPopulation]) VALUES (N'L007', N'Military Base', N'Ally Base', N'High', 60, 14)
 GO
 
 INSERT [dbo].[Locations] ([LocationID], [LocationName], [LocationType], [LocationSafetyLevel], [LocationCapacity], [LocationPopulation]) VALUES (N'L008', N'Water Treatment Plant', N'Source', N'Medium', 10, 5)
