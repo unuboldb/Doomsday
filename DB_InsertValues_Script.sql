@@ -475,7 +475,7 @@ GO
 INSERT [dbo].[Adversaries] ([AdversaryID], [LocationID], [ThreatName], [ThreatLevel], [LastEncountered]) VALUES (N'V014', N'L007', N'Ally Altercation', N'Low', CAST(N'1930-03-21T00:00:00.000' AS DateTime))
 GO
 
-INSERT [dbo].[Inventory] ([InventoryID], [CurrencyID], [Category], [Quantity], [InventoryValue], [Measurement]) VALUES (N'I001', N'C001', N'Food', N'1560', N'High', N'Lbs')
+INSERT [dbo].[Inventory] ([InventoryID], [CurrencyID], [Category], [Quantity], [InventoryValue], [Measurement]) VALUES (N'I001', N'C001', N'Food', N'1560', N'High', N'Servings')
 GO
 
 INSERT [dbo].[Inventory] ([InventoryID], [CurrencyID], [Category], [Quantity], [InventoryValue], [Measurement]) VALUES (N'I002', N'C002', N'Water', N'1376', N'High', N'Gallons')
