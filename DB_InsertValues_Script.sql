@@ -17,10 +17,10 @@ GO
 INSERT [dbo].[Locations] ([LocationID], [LocationName], [LocationType], [LocationSafetyLevel], [LocationCapacity], [LocationPopulation]) VALUES (N'L005', N'Grocery Store', N'Food Source', N'Low', 25, 5)
 GO
 
-INSERT [dbo].[Locations] ([LocationID], [LocationName], [LocationType], [LocationSafetyLevel], [LocationCapacity], [LocationPopulation]) VALUES (N'L006', N'FarmHouse', N'Ally Base', N'Medium', 40, 14)
+INSERT [dbo].[Locations] ([LocationID], [LocationName], [LocationType], [LocationSafetyLevel], [LocationCapacity], [LocationPopulation]) VALUES (N'L006', N'FarmHouse', N'Ally Base', N'Medium', 40, 18)
 GO
 
-INSERT [dbo].[Locations] ([LocationID], [LocationName], [LocationType], [LocationSafetyLevel], [LocationCapacity], [LocationPopulation]) VALUES (N'L007', N'Military Base', N'Ally Base', N'High', 60, 18)
+INSERT [dbo].[Locations] ([LocationID], [LocationName], [LocationType], [LocationSafetyLevel], [LocationCapacity], [LocationPopulation]) VALUES (N'L007', N'Military Base', N'Ally Base', N'High', 60, 14)
 GO
 
 INSERT [dbo].[Locations] ([LocationID], [LocationName], [LocationType], [LocationSafetyLevel], [LocationCapacity], [LocationPopulation]) VALUES (N'L008', N'Water Treatment Plant', N'Source', N'Medium', 10, 5)
@@ -52,34 +52,34 @@ GO
 INSERT [dbo].[Water] ([WaterID], [WaterSource], [WaterType], [WaterQuantity]) VALUES (N'W005', N'River', N'Clean', NULL)
 GO
 
-INSERT [dbo].[Food] ([FoodID], [FoodName], [FoodQuantity], [FoodExpiryDate]) VALUES (N'F001', N'Canned Beans', 100, CAST(N'2025-03-15T00:00:00.000' AS DateTime))
+INSERT [dbo].[Food] ([FoodID], [FoodName], [FoodQuantity], [FoodExpiryDate]) VALUES (N'F001', N'Canned Beans', 100, CAST(N'2035-03-15T00:00:00.000' AS DateTime))
 GO
 
-INSERT [dbo].[Food] ([FoodID], [FoodName], [FoodQuantity], [FoodExpiryDate]) VALUES (N'F002', N'Rice', 200, CAST(N'2026-01-01T00:00:00.000' AS DateTime))
+INSERT [dbo].[Food] ([FoodID], [FoodName], [FoodQuantity], [FoodExpiryDate]) VALUES (N'F002', N'Rice', 200, CAST(N'2032-01-01T00:00:00.000' AS DateTime))
 GO
 
-INSERT [dbo].[Food] ([FoodID], [FoodName], [FoodQuantity], [FoodExpiryDate]) VALUES (N'F003', N'Dried Pasta', 150, CAST(N'2025-12-31T00:00:00.000' AS DateTime))
+INSERT [dbo].[Food] ([FoodID], [FoodName], [FoodQuantity], [FoodExpiryDate]) VALUES (N'F003', N'Dried Pasta', 150, CAST(N'2032-12-31T00:00:00.000' AS DateTime))
 GO
 
-INSERT [dbo].[Food] ([FoodID], [FoodName], [FoodQuantity], [FoodExpiryDate]) VALUES (N'F004', N'Energy Bars', 300, CAST(N'2025-05-20T00:00:00.000' AS DateTime))
+INSERT [dbo].[Food] ([FoodID], [FoodName], [FoodQuantity], [FoodExpiryDate]) VALUES (N'F004', N'Energy Bars', 300, CAST(N'2031-05-20T00:00:00.000' AS DateTime))
 GO
 
-INSERT [dbo].[Food] ([FoodID], [FoodName], [FoodQuantity], [FoodExpiryDate]) VALUES (N'F005', N'Powdered Milk', 50, CAST(N'2025-08-30T00:00:00.000' AS DateTime))
+INSERT [dbo].[Food] ([FoodID], [FoodName], [FoodQuantity], [FoodExpiryDate]) VALUES (N'F005', N'Powdered Milk', 50, CAST(N'2035-08-30T00:00:00.000' AS DateTime))
 GO
 
-INSERT [dbo].[Food] ([FoodID], [FoodName], [FoodQuantity], [FoodExpiryDate]) VALUES (N'F006', N'Canned Tuna', 120, CAST(N'2026-03-10T00:00:00.000' AS DateTime))
+INSERT [dbo].[Food] ([FoodID], [FoodName], [FoodQuantity], [FoodExpiryDate]) VALUES (N'F006', N'Canned Tuna', 120, CAST(N'2035-03-10T00:00:00.000' AS DateTime))
 GO
 
-INSERT [dbo].[Food] ([FoodID], [FoodName], [FoodQuantity], [FoodExpiryDate]) VALUES (N'F007', N'Flour', 100, CAST(N'2025-11-15T00:00:00.000' AS DateTime))
+INSERT [dbo].[Food] ([FoodID], [FoodName], [FoodQuantity], [FoodExpiryDate]) VALUES (N'F007', N'Flour', 100, CAST(N'2031-11-15T00:00:00.000' AS DateTime))
 GO
 
-INSERT [dbo].[Food] ([FoodID], [FoodName], [FoodQuantity], [FoodExpiryDate]) VALUES (N'F008', N'Instant Noodles', 400, CAST(N'2025-09-01T00:00:00.000' AS DateTime))
+INSERT [dbo].[Food] ([FoodID], [FoodName], [FoodQuantity], [FoodExpiryDate]) VALUES (N'F008', N'Instant Noodles', 400, CAST(N'2031-09-01T00:00:00.000' AS DateTime))
 GO
 
-INSERT [dbo].[Food] ([FoodID], [FoodName], [FoodQuantity], [FoodExpiryDate]) VALUES (N'F009', N'Peanut Butter', 60, CAST(N'2025-07-22T00:00:00.000' AS DateTime))
+INSERT [dbo].[Food] ([FoodID], [FoodName], [FoodQuantity], [FoodExpiryDate]) VALUES (N'F009', N'Peanut Butter', 60, CAST(N'2031-07-22T00:00:00.000' AS DateTime))
 GO
 
-INSERT [dbo].[Food] ([FoodID], [FoodName], [FoodQuantity], [FoodExpiryDate]) VALUES (N'F010', N'Chocolate Bars', 80, CAST(N'2025-06-10T00:00:00.000' AS DateTime))
+INSERT [dbo].[Food] ([FoodID], [FoodName], [FoodQuantity], [FoodExpiryDate]) VALUES (N'F010', N'Chocolate Bars', 80, CAST(N'2032-06-10T00:00:00.000' AS DateTime))
 GO
 
 INSERT [dbo].[Power] ([PowerID], [PowerType], [FuelType], [Capacity]) VALUES (N'O001', N'Generator', N'Solar', 500)
@@ -475,7 +475,7 @@ GO
 INSERT [dbo].[Adversaries] ([AdversaryID], [LocationID], [ThreatName], [ThreatLevel], [LastEncountered]) VALUES (N'V014', N'L007', N'Ally Altercation', N'Low', CAST(N'1930-03-21T00:00:00.000' AS DateTime))
 GO
 
-INSERT [dbo].[Inventory] ([InventoryID], [CurrencyID], [Category], [Quantity], [InventoryValue], [Measurement]) VALUES (N'I001', N'C001', N'Food', N'1560', N'High', N'Lbs')
+INSERT [dbo].[Inventory] ([InventoryID], [CurrencyID], [Category], [Quantity], [InventoryValue], [Measurement]) VALUES (N'I001', N'C001', N'Food', N'1560', N'High', N'Servings')
 GO
 
 INSERT [dbo].[Inventory] ([InventoryID], [CurrencyID], [Category], [Quantity], [InventoryValue], [Measurement]) VALUES (N'I002', N'C002', N'Water', N'1376', N'High', N'Gallons')
