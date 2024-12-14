@@ -29,10 +29,8 @@ GO
 INSERT [dbo].[Locations] ([LocationID], [LocationName], [LocationType], [LocationSafetyLevel], [LocationCapacity], [LocationPopulation]) VALUES (N'L009', N'East River', N'Water Source', N'Low', NULL, NULL)
 GO
 
-
 INSERT [dbo].[Locations] ([LocationID], [LocationName], [LocationType], [LocationSafetyLevel], [LocationCapacity], [LocationPopulation]) VALUES (N'L010', N'Western Shore', N'Water Source', N'Low', NULL, NULL)
 GO
-
 
 INSERT [dbo].[Locations] ([LocationID], [LocationName], [LocationType], [LocationSafetyLevel], [LocationCapacity], [LocationPopulation]) VALUES (N'L011', N'Northern Lake', N'Water Source', N'Medium', NULL, NULL)
 GO
